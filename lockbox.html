@@ -23,12 +23,17 @@
     <a id="open-link" href="#">Open the box</a>
   </p>
 
-  <p id="box">Surprise!</p>
+  <button type="button">Close Box</p>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript">
     $('#open-link').on('click', function (e) {
-      alert("lol it's locked.");
+      e.preventDefault();
+      $('#box').show();
+    });
+
+    $('button').on('click', function (e) {
+      $('button').hide();
     });
   </script>
 
